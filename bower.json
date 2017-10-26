@@ -1,0 +1,20 @@
+{
+  "name": "kilbeggan",
+  "description": "",
+  "main": "index.html",
+  "authors": [
+    "Alexander Vlasenko"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/oxyyyyy/kilbeggan",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "popper.js": "^1.12.6"
+  }
+}
