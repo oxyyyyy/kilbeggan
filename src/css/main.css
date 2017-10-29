@@ -271,5 +271,8 @@ footer {
       .products .products-desc:before {
         content: none; } }
 
-.videos {
+.videos, .irland {
   padding-top: 83px; }
+
+.irland .video-desc {
+  margin-bottom: 0; }
