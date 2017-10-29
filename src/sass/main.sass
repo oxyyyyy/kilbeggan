@@ -156,26 +156,35 @@ footer
 	flex-direction: column
 	justify-content: flex-end
 	align-items: center
-	margin-bottom: 50px
+	margin-bottom: 180px
+	@media (max-width: $sm_screen)
+		margin-bottom: 50px
 .products-desc__product-label
 	margin-bottom: 50px
+	box-shadow: $main_shadow_prop
+	border-radius: 50%
 .column__info-card
 	padding: 25px
 	background-color: #000
 	border-top: solid 1px #fff
 	border-bottom: solid 1px #fff
-	min-height: 325px
+	text-align: center
+	height: 100%
+	@media (max-width: $sm_screen)
+		height: auto
 	@media (max-width: $md_screen)
-		min-height: 352px
-	@media (max-width: $md_screen)
-		min-height: auto
-	h4
-		font-size: 22px
 		margin-bottom: 10px
+		h4
+			font-size: 20px
+		p
+			font-size: 16px
 	p
 		margin-bottom: 50px
 		&:last-child
 			margin-bottom: 0
+.desktop-info-card-container
+	@media (max-width: $sm_screen)
+		display: none
 .medals-container
 	text-align: center
 	margin-top: 50px
@@ -190,14 +199,18 @@ footer
 	.column__title
 		margin-bottom: 25px
 		min-height: auto
-	.column__text-container
-		min-height: 580px
-		@media (max-width: $md_screen)
-			min-height: 700px
-		@media (max-width: $sm_screen)
-			min-height: auto
 	.column__text
 		&:last-child
 			margin-bottom: 50px
 	.column__photo
 		margin-top: 0
+	.products-desc
+		&:before
+			content: ""
+			width: 100%
+			height: 200px
+			background-color: #000
+			position: absolute
+			top: 565px
+			@media (max-width: $sm_screen)
+				content: none
