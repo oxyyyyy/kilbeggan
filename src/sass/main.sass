@@ -8,6 +8,7 @@ h2, h3, h4
 	letter-spacing: 2px
 	font-size: 29px
 	margin-bottom: 20px
+	text-transform: uppercase
 	@media (max-width: $xs_screen)
 		font-size: 23px
 p
@@ -191,6 +192,29 @@ footer
 	img
 		width: 100%
 		margin-bottom: 50px
+.video
+	height: 84vh
+	box-shadow: $main_shadow_prop
+.video-desc
+	margin-top: 25px
+	margin-bottom: 50px
+	h2
+		margin-bottom: 5px
+	p
+		font-size: 16px
+.buy-btn
+	display: inline-block
+	width: 260px
+	height: 46px
+	margin: 50px auto
+	text-align: center
+	background-image: url('../img/buy-btn.svg')
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	font-size: 16px
+	font-weight: 500
+	letter-spacing: 1px
 
 
 // Pages customization
@@ -214,3 +238,5 @@ footer
 			top: 565px
 			@media (max-width: $sm_screen)
 				content: none
+.videos
+	padding-top: 83px
