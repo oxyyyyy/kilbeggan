@@ -15,6 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "popper.js": "^1.12.6"
+    "popper.js": "^1.12.6",
+    "glidejs": "^2.1.0"
   }
 }

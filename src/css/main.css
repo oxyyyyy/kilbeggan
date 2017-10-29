@@ -1,22 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:500");
-h2, h3 {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.5px;
-  letter-spacing: 1.8px;
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:500");
+h2, h3, h4 {
+  letter-spacing: 2px;
   font-size: 29px;
   margin-bottom: 20px; }
   @media (max-width: 575px) {
-    h2, h3 {
+    h2, h3, h4 {
       font-size: 23px; } }
 
+p {
+  font-family: 'Lora', serif;
+  line-height: 30px; }
+
 .gold {
-  background: linear-gradient(to right, #ae5a33 0%, #f29263 50%, #ae5a33 100%);
+  background: linear-gradient(to right, #eb733b 0%, #faa47d 50%, #eb733b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
 .column__title {
   font-size: 21px;
   min-height: 75px; }
+  @media (max-width: 991px) {
+    .column__title {
+      min-height: auto; } }
 
 ol {
   counter-reset: myCounter;
@@ -35,7 +40,8 @@ a {
 
 .gold-link {
   color: #d38050;
-  text-decoration: underline; }
+  text-decoration: underline;
+  font-style: italic; }
   .gold-link:hover {
     color: #d38050;
     text-decoration: underline; }
@@ -51,8 +57,8 @@ body {
       font-size: 16px; } }
 
 nav {
-  height: 50px;
-  margin-top: 50px;
+  height: 80px;
+  padding-top: 35px !important;
   background-image: url("../img/backgrounds/navbar_bg.png");
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
   @media (max-width: 991px) {
@@ -63,7 +69,12 @@ nav {
   color: #fff !important;
   opacity: 0.6;
   padding-right: 30px !important;
-  position: relative; }
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 1.5px; }
+  @media (max-width: 1199px) {
+    .nav-link {
+      letter-spacing: 0; } }
   .nav-link:after {
     content: "|";
     position: absolute;
@@ -86,11 +97,11 @@ nav {
   @media (max-width: 991px) {
     .nav-logo-img {
       position: absolute;
-      top: -38px; } }
+      top: -16px; } }
   @media (max-width: 575px) {
     .nav-logo-img {
       width: 270px;
-      top: -35px; } }
+      top: -7px; } }
 
 .navbar-nav {
   margin: auto; }
@@ -98,14 +109,23 @@ nav {
     .navbar-nav {
       margin-top: 35px; } }
 
-.header-img {
-  width: 100%; }
+.header-slider-photo {
+  height: 100vh;
+  background-size: cover;
+  background-position: center; }
+  .header-slider-photo:nth-child(1) {
+    background-image: url("../img/home_header_img.png"); }
+  .header-slider-photo:nth-child(2) {
+    background-image: url("../img/home_header_img.png"); }
+  .header-slider-photo:nth-child(3) {
+    background-image: url("../img/home_header_img.png"); }
 
 .navbar-toggler {
-  border: 1px solid #fff; }
+  border: none;
+  margin-top: -8px; }
 
 .fa-bars {
-  color: #fff; }
+  color: #eb733b; }
 
 section.index-header-text {
   padding: 75px 0; }
@@ -122,9 +142,12 @@ section.index-header-text {
     text-align: center;
     line-height: 40px;
     width: 40px;
-    height: 40px; }
+    height: 40px;
+    font-size: 20px;
+    font-weight: 500; }
 
 .column__text {
+  font-size: 17px;
   text-align: justify; }
 
 .column__photo {
@@ -149,5 +172,61 @@ footer {
 .footer__link:last-child:after {
   content: none; }
 
-.index {
-  padding-top: 100px; }
+.products-desc__column {
+  text-align: center; }
+
+.products-desc__bottle-container {
+  height: 525px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 50px; }
+
+.products-desc__product-label {
+  margin-bottom: 50px; }
+
+.column__info-card {
+  padding: 25px;
+  background-color: #000;
+  border-top: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  min-height: 325px; }
+  @media (max-width: 1199px) {
+    .column__info-card {
+      min-height: 352px; } }
+  @media (max-width: 1199px) {
+    .column__info-card {
+      min-height: auto; } }
+  .column__info-card h4 {
+    font-size: 22px;
+    margin-bottom: 10px; }
+  .column__info-card p {
+    margin-bottom: 50px; }
+    .column__info-card p:last-child {
+      margin-bottom: 0; }
+
+.medals-container {
+  text-align: center;
+  margin-top: 50px; }
+  .medals-container img {
+    width: 100%;
+    margin-bottom: 50px; }
+
+.products {
+  padding-top: 150px; }
+  .products .column__title {
+    margin-bottom: 25px;
+    min-height: auto; }
+  .products .column__text-container {
+    min-height: 580px; }
+    @media (max-width: 1199px) {
+      .products .column__text-container {
+        min-height: 700px; } }
+    @media (max-width: 991px) {
+      .products .column__text-container {
+        min-height: auto; } }
+  .products .column__text:last-child {
+    margin-bottom: 50px; }
+  .products .column__photo {
+    margin-top: 0; }
