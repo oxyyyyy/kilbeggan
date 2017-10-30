@@ -1,3 +1,7 @@
+// TODO:
+// 1. Бургер на CSS написать + убрать осм фонтс
+// 2. Анимации (+)
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:500')
 
@@ -94,6 +98,11 @@ nav
 	margin: auto
 	@media (max-width: $sm_screen)
 		margin-top: 35px
+.navbar-toggler__bar
+	width: 25px
+	height: 2px
+	margin: 6px
+	background-color: $gold_color
 .header-slider-photo
 	height: 100vh
 	background-size: cover
@@ -135,11 +144,17 @@ section.index-header-text
 	margin: 50px 0
 	box-shadow: $main_shadow_prop
 footer
+	margin-top: -50px
+	padding-top: 40px
 	padding-bottom: 40px
+	background-color: #000
+	box-shadow: $main_shadow_prop
 .footer__link
 	margin-right: 30px
 	position: relative
 	opacity: .6
+.footer__link-active
+	opacity: 1
 	&:after
 		content: "|"
 		position: absolute
@@ -215,6 +230,43 @@ footer
 	font-size: 16px
 	font-weight: 500
 	letter-spacing: 1px
+form
+	text-align: right
+#name, #surname
+	margin-bottom: 40px
+	@media (max-width: $sm_screen)
+		margin-bottom: 20px
+#email
+	@media (max-width: 767px)
+		margin-bottom: 20px
+textarea
+	height: 100%
+	resize: none
+	overflow: hidden
+	margin-bottom: 20px
+button[type="submit"]
+	background-color: transparent
+	border: none
+	cursor: pointer
+	font-weight: 500
+	letter-spacing: 2px
+	padding-right: 0
+	transition: .5s
+	&:hover, &:focus, &:visited, &:active
+		background-color: transparent !important
+		border: none !important
+		border-color: transparent !important
+		box-shadow: none !important
+		outline: none !important
+		color: $gold_color
+section.contact
+	margin-bottom: 100px
+.adress
+	margin-bottom: 100px
+.adress__link
+	text-decoration: underline
+	&:hover
+		text-decoration: underline
 
 
 // Pages customization
@@ -238,8 +290,47 @@ footer
 			top: 565px
 			@media (max-width: $sm_screen)
 				content: none
+.videos
+	footer
+		margin-top: 0
 .videos, .irland
 	padding-top: 83px
 .irland
 	.video-desc
 		margin-bottom: 0
+.contacts
+	padding-top: 200px
+	@media (max-width: $sm_screen)
+		padding-top: 125px
+	footer
+		margin-top: 0
+
+// Modal
+.modal
+	text-align: center
+	background-color: $modal_overlay
+.modal-dialog
+	height: 90%
+	display: flex
+	justify-content: center
+	align-items: center
+.modal-content
+	background-color: transparent
+	border: none
+.modal-header, .modal-footer
+	border: none
+.modal__logo
+	margin: auto
+.modal__form
+	width: 100%
+	text-align: center
+	button[type="submit"]
+		padding: .375rem .75rem
+		margin-top: 20px
+		font-size: 17px
+		letter-spacing: 2.5px
+.modal__select
+	display: flex
+	justify-content: space-around
+	select
+		width: 25%

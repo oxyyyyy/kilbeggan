@@ -34,7 +34,8 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
 	return gulp.src([
 		// 'src/libs/**/*.js',
-		'bower_components/glidejs/dist/glide.min.js'
+		'bower_components/glidejs/dist/glide.min.js',
+		'bower_components/wow/dist/wow.min.js'
 	])
 		.pipe(concat('bundle.libs.min.js'))
 		.pipe(uglify())
@@ -45,7 +46,8 @@ gulp.task('concatCssTaskLibs', function () {
 	return gulp.src([
 		'node_modules/bootstrap/dist/css/bootstrap.min.css',
 		'bower_components/glidejs/dist/css/glide.core.min.css',
-		'bower_components/glidejs/dist/css/glide.theme.min.css'
+		'bower_components/glidejs/dist/css/glide.theme.min.css',
+		'bower_components/wow/css/libs/animate.css'
 	])
 		.pipe(concatCss('bundle.libs.css'))
 		.pipe(gulp.dest('src/css'));

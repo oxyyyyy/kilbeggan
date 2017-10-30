@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "popper.js": "^1.12.6",
-    "glidejs": "^2.1.0"
+    "glidejs": "^2.1.0",
+    "wow": "wowjs#^1.1.2"
   }
 }
