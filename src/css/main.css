@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:500");
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:500");
 h2, h3, h4 {
   letter-spacing: 2px;
   font-size: 29px;
@@ -172,16 +172,19 @@ footer {
 .footer__link {
   margin-right: 30px;
   position: relative;
-  opacity: .6; }
-
-.footer__link-active {
-  opacity: 1; }
-  .footer__link-active:after {
+  opacity: 1;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  font-size: 12px; }
+  .footer__link:after {
     content: "|";
     position: absolute;
     right: -19px;
     top: -2px;
     opacity: 1; }
+
+.footer__link-active {
+  opacity: 1; }
 
 .footer__link:last-child:after {
   content: none; }
@@ -243,10 +246,12 @@ footer {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .video-desc {
-  margin-top: 25px;
+  margin-top: 75px;
   margin-bottom: 50px; }
   .video-desc h2 {
     margin-bottom: 5px; }
+  .video-desc h2, .video-desc h3 {
+    font-weight: 700; }
   .video-desc p {
     font-size: 16px; }
 
@@ -287,7 +292,7 @@ button[type="submit"] {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   padding-right: 0;
   transition: .5s; }
@@ -314,7 +319,8 @@ section.contact {
   padding-top: 150px; }
   .products .column__title {
     margin-bottom: 25px;
-    min-height: auto; }
+    min-height: auto;
+    font-weight: 700; }
   .products .column__text:last-child {
     margin-bottom: 50px; }
   .products .column__photo {
@@ -336,16 +342,25 @@ section.contact {
 .videos, .irland {
   padding-top: 83px; }
 
-.irland .video-desc {
+#video-desc2__irland {
   margin-bottom: 0; }
+  #video-desc2__irland .row {
+    margin-bottom: 75px; }
 
 .contacts {
   padding-top: 200px; }
   @media (max-width: 991px) {
     .contacts {
       padding-top: 125px; } }
+  .contacts h2 {
+    font-weight: 500; }
+  .contacts #impressum {
+    margin-bottom: 50px; }
   .contacts footer {
     margin-top: 0; }
+  .contacts .form-control {
+    border-radius: 0 !important;
+    font-family: 'Lora', serif; }
 
 .modal {
   text-align: center;

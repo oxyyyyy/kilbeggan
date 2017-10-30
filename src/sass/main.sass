@@ -1,9 +1,14 @@
 // TODO:
-// 1. Бургер на CSS написать + убрать осм фонтс
+// 1. Бургер на CSS написать + убрать осм фонтс (+)
 // 2. Анимации (+)
+// 3. Правки:
+// - контакты (+)
+// - видео (+-)
+// - продукты (+-)
+// - Ирландия
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i|Roboto:500')
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Roboto:500')
 
 @import 'vars'
 
@@ -152,15 +157,18 @@ footer
 .footer__link
 	margin-right: 30px
 	position: relative
-	opacity: .6
-.footer__link-active
 	opacity: 1
+	font-weight: 700
+	letter-spacing: 1.8px
+	font-size: 12px
 	&:after
 		content: "|"
 		position: absolute
 		right: -19px
 		top: -2px
 		opacity: 1
+.footer__link-active
+	opacity: 1
 .footer__link:last-child
 	&:after
 		content: none
@@ -211,10 +219,12 @@ footer
 	height: 84vh
 	box-shadow: $main_shadow_prop
 .video-desc
-	margin-top: 25px
+	margin-top: 75px
 	margin-bottom: 50px
 	h2
 		margin-bottom: 5px
+	h2, h3
+		font-weight: 700
 	p
 		font-size: 16px
 .buy-btn
@@ -248,7 +258,7 @@ button[type="submit"]
 	background-color: transparent
 	border: none
 	cursor: pointer
-	font-weight: 500
+	font-weight: 700
 	letter-spacing: 2px
 	padding-right: 0
 	transition: .5s
@@ -275,6 +285,7 @@ section.contact
 	.column__title
 		margin-bottom: 25px
 		min-height: auto
+		font-weight: 700
 	.column__text
 		&:last-child
 			margin-bottom: 50px
@@ -295,15 +306,24 @@ section.contact
 		margin-top: 0
 .videos, .irland
 	padding-top: 83px
-.irland
-	.video-desc
-		margin-bottom: 0
+#video-desc2__irland
+	margin-bottom: 0
+	.row
+		margin-bottom: 75px
 .contacts
 	padding-top: 200px
 	@media (max-width: $sm_screen)
 		padding-top: 125px
+	h2
+		font-weight: 500
+	#impressum
+		margin-bottom: 50px
 	footer
 		margin-top: 0
+	.form-control
+		border-radius: 0 !important
+		font-family: 'Lora', serif
+
 
 // Modal
 .modal
