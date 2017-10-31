@@ -277,6 +277,8 @@ footer {
   position: relative; }
 
 .play-btn {
+  width: 150px;
+  height: 150px;
   opacity: .7;
   cursor: pointer; }
   .play-btn:hover {
