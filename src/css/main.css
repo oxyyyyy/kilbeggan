@@ -112,6 +112,9 @@ nav {
     .navbar-nav {
       margin-top: 35px; } }
 
+.navbar-toggler {
+  padding-bottom: 15px; }
+
 .navbar-toggler__bar {
   width: 25px;
   height: 2px;
