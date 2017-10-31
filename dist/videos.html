@@ -49,7 +49,18 @@
 	</nav>
 
 	<section class="videos-section">
-		<iframe width="100%" class="video wow fadeIn" src="https://www.youtube.com/embed/O48hUxxJxS8" frameborder="0" allowfullscreen></iframe>
+		<div class="wow fadeIn">
+			<div id="video-preview-1" class="video-preview">
+				<img src="img/play_btn.svg" class="play-btn" alt="">
+			</div>
+			<div id="embed-video-container-1" class="embed-video-container">
+				<iframe id="video-1" width="100%" class="video" src="https://www.youtube.com/embed/FMtwk_p10p4?rel=0&amp;showinfo=0" frameborder="0"
+				 allowfullscreen></iframe>
+				<div id="close-btn-1" class="close-btn-container">
+					<i class="close-btn fa fa-2x fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="video-desc">
 				<h2>video 1</h2>
@@ -65,7 +76,18 @@
 				</div>
 			</div>
 		</div>
-		<iframe width="100%" class="video wow fadeIn" src="https://www.youtube.com/embed/TlP8oC8sGIM" frameborder="0" allowfullscreen></iframe>
+		<div class="wow fadeIn">
+			<div id="video-preview-2" class="video-preview">
+				<img src="img/play_btn.svg" class="play-btn" alt="">
+			</div>
+			<div id="embed-video-container-2" class="embed-video-container">
+				<iframe id="video-2" width="100%" class="video wow fadeIn" src="https://www.youtube.com/embed/7QJnHcbM9UI?rel=0&amp;showinfo=0"
+				 frameborder="0" allowfullscreen></iframe>
+				<div id="close-btn-2" class="close-btn-container">
+					<i class="close-btn fa fa-2x fa-times" aria-hidden="true"></i>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="video-desc">
 				<h2>video 2</h2>
@@ -103,7 +125,7 @@
 						<br>Gib hierfür bitte Dein Geburtsdatum ein.</p>
 				</div>
 				<div class="modal-footer">
-					<form action="#" class="modal__form">
+					<form action="index.html" method="post" class="modal__form">
 						<div class="modal__select">
 							<select class="form-control" id="modal__day">
 								<option id="1" value="1">1</option>
@@ -280,6 +302,7 @@
 		</div>
 	</div>
 
+	<!-- Font Awesome -->
 	<script src="https://use.fontawesome.com/70753e2de3.js"></script>
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
