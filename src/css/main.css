@@ -198,10 +198,18 @@ footer {
   text-align: center; }
 
 #product-bottle-2 {
-  margin-top: -10px; }
+  margin-top: -10px;
+  margin-bottom: 190px; }
+  @media (max-width: 991px) {
+    #product-bottle-2 {
+      margin-bottom: 25px; } }
 
 #product-bottle-3 {
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 170px; }
+  @media (max-width: 991px) {
+    #product-bottle-3 {
+      margin-bottom: 25px; } }
 
 .products-desc__bottle-container {
   height: 525px;
@@ -209,10 +217,19 @@ footer {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 180px; }
+  margin-bottom: 180px;
+  position: relative; }
   @media (max-width: 991px) {
     .products-desc__bottle-container {
-      margin-bottom: 50px; } }
+      margin-bottom: 25px; }
+      .products-desc__bottle-container:after {
+        content: '';
+        width: 300%;
+        height: 150px;
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        z-index: -1; } }
 
 .products-desc__product-label {
   margin-bottom: 50px;
@@ -231,7 +248,7 @@ footer {
       height: auto; } }
   @media (max-width: 1199px) {
     .column__info-card {
-      margin-bottom: 10px; }
+      margin-bottom: 75px; }
       .column__info-card h4 {
         font-size: 20px; }
       .column__info-card p {
@@ -415,6 +432,43 @@ section.contact {
   .contacts .form-control {
     border-radius: 0 !important;
     font-family: 'Lora', serif; }
+
+.privacy-text {
+  padding-top: 150px; }
+  .privacy-text h2 {
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 600; }
+  .privacy-text h3 {
+    margin-bottom: 30px;
+    font-size: 22px; }
+    @media (max-width: 575px) {
+      .privacy-text h3 {
+        font-size: 20px; } }
+  .privacy-text p {
+    margin-bottom: 20px;
+    font-size: 16px; }
+  .privacy-text .text-block {
+    margin-top: 100px;
+    padding-top: 15px;
+    position: relative; }
+    .privacy-text .text-block:before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(to right, #eb733b 0%, #faa47d 50%, #eb733b 100%);
+      position: absolute;
+      top: -5px; }
+    .privacy-text .text-block:last-child {
+      margin-bottom: 130px; }
+  .privacy-text ul {
+    font-family: 'Lora', serif;
+    margin-bottom: 25px; }
+    .privacy-text ul li {
+      list-style: square;
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 3px; }
 
 .modal {
   text-align: center;

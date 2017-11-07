@@ -1,4 +1,7 @@
 // TODO:
+// --- NOT DONE: ---
+// 1. Страница "privacy"
+// +++ DONE: +++
 // 1. Бургер на CSS написать + убрать осм фонтс (+)
 // 2. Анимации (+)
 // 3. Правки:
@@ -181,8 +184,14 @@ footer
 	text-align: center
 #product-bottle-2
 	margin-top: -10px
+	margin-bottom: 190px
+	@media (max-width: $sm_screen)
+		margin-bottom: 25px
 #product-bottle-3
 	margin-top: 10px
+	margin-bottom: 170px
+	@media (max-width: $sm_screen)
+		margin-bottom: 25px
 .products-desc__bottle-container
 	height: 525px
 	display: flex
@@ -190,8 +199,17 @@ footer
 	justify-content: flex-end
 	align-items: center
 	margin-bottom: 180px
+	position: relative
 	@media (max-width: $sm_screen)
-		margin-bottom: 50px
+		margin-bottom: 25px
+		&:after
+			content: ''
+			width: 300%
+			height: 150px
+			background-color: black
+			position: absolute
+			bottom: 0
+			z-index: -1
 .products-desc__product-label
 	margin-bottom: 50px
 	box-shadow: $main_shadow_prop
@@ -206,7 +224,7 @@ footer
 	@media (max-width: $sm_screen)
 		height: auto
 	@media (max-width: $md_screen)
-		margin-bottom: 10px
+		margin-bottom: 75px
 		h4
 			font-size: 20px
 		p
@@ -366,7 +384,42 @@ section.contact
 	.form-control
 		border-radius: 0 !important
 		font-family: 'Lora', serif
-
+.privacy-text
+	padding-top: 150px
+	h2
+		margin-bottom: 30px
+		font-size: 34px
+		font-weight: 600
+	h3
+		margin-bottom: 30px
+		font-size: 22px
+		@media (max-width: $xs_screen)
+			font-size: 20px
+	p
+		margin-bottom: 20px
+		font-size: 16px
+	.text-block
+		margin-top: 100px
+		padding-top: 15px
+		// border-top: solid 2px $gold_color
+		position: relative
+		&:before
+			content: ''
+			width: 100%
+			height: 2px
+			background: $gold_text_gradient
+			position: absolute
+			top: -5px
+		&:last-child
+			margin-bottom: 130px
+	ul
+		font-family: 'Lora', serif
+		margin-bottom: 25px
+		li
+			list-style: square
+			font-size: 16px
+			line-height: 30px
+			margin-bottom: 3px
 
 // Modal
 .modal
@@ -397,5 +450,3 @@ section.contact
 	justify-content: space-around
 	select
 		width: 25%
-
-// Videos
