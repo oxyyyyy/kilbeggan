@@ -116,7 +116,7 @@ gulp.task('imgOpti', ['cleanDistImg'], () =>
 gulp.task('build', ['clean', 'scripts', 'minCss', 'minCssLibs'], function () {
 
 	var buildCss = gulp.src([
-		'src/css/main.min.css',
+		'src/css/main.css',
 		'src/css/bundle.libs.min.css'
 	])
 		.pipe(gulp.dest('dist/css'));

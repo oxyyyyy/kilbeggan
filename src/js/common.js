@@ -9,11 +9,8 @@ $("#index_header_slider").glide({
 // Init wow.js
 new WOW().init();
 
-
 // Videos
-
 $(document).ready(function () {
-
 	const initVideoPlayer =
 		id => {
 			const src = $(`#video-${id}`).attr('src');
@@ -23,7 +20,7 @@ $(document).ready(function () {
 				$(`#video-${id}`).show();
 				$(`#close-btn-${id}`).show();
 			});
-			$(`#close-btn-1`).click(function () {
+			$(`#close-btn-${id}`).click(function () {
 				$(this).hide();
 				$(`#close-btn-${id}`).hide();
 				$(`#video-preview-${id}`).show();
@@ -32,9 +29,7 @@ $(document).ready(function () {
 				$(`#video-${id}`).attr('src', src);
 			});
 		}
-
-	for (let i = 1; i <= 3; i++) {
-		initVideoPlayer(i);
-	}
+		$(".video").each(function () {
+			initVideoPlayer(this.id.substr(this.id.length-1,1));
+		});
 });
-
