@@ -15,26 +15,37 @@ new WOW().init();
 // New universal script
 $(document).ready(function () {
 	numberOfVideos = $(".video").length;
-	console.log(numberOfVideos);
-	var video = $(".video").attr("id");
-	var videoSrc = $(".video").attr("src");
-	var videoPreview = $(".video-preview").attr("id");
-	var videoPlayBtn = $(".play-btn").attr("id");
-	var videoCloseBtn = $(".close-btn-container").attr("id");
-	$("#"+videoPreview).click(function () {
-		$(this).hide();
-		$("#"+video)[0].videoSrc += "&autoplay=1";
-		$("#"+video).show();
-		$("#"+videoCloseBtn).show();
-	});
-	$("#"+videoCloseBtn).click(function () {
-		$(this).hide();
-		$("#"+videoCloseBtn).hide();
-		$("#"+videoPreview).show();
-		$("#"+video).hide();
-		$("#"+video).attr("src", "");
-		$("#"+video).attr("src", videoSrc); 
-	});
+	console.log("Number of videos on the page =", numberOfVideos);
+	var i = 1;
+	while (i <= numberOfVideos) {
+		console.log("Iteracion number:", i);
+		var video = $(".video").attr("id");
+		video = video.substring(0, video.length - 1) + i;
+		console.log(video);
+		var videoSrc = $("#" + video).attr("src");
+		console.log(videoSrc);
+		var videoPreview = $(".video-preview").attr("id");
+		videoPreview = videoPreview.substring(0, videoPreview.length - 1) + i;
+		console.log(videoPreview);
+		var videoCloseBtn = $(".close-btn-container").attr("id");
+		videoCloseBtn = videoCloseBtn.substring(0, videoCloseBtn.length - 1) + i;
+		console.log(videoCloseBtn);			
+		$("#" + videoPreview).click(function () {
+			$(this).hide();
+			$("#" + video)[0].videoSrc += "&autoplay=1";
+			$("#" + video).show();
+			$("#" + videoCloseBtn).show();
+		});
+		$("#" + videoCloseBtn).click(function () {
+			$(this).hide();
+			$("#" + videoCloseBtn).hide();
+			$("#" + videoPreview).show();
+			$("#" + video).hide();
+			$("#" + video).attr("src", "");
+			$("#" + video).attr("src", videoSrc);
+		});
+		i++;
+	}
 })
 
 // Video 3
